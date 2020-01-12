@@ -7,6 +7,7 @@ function drawChart(winData) {
 		labels.push("Player "+parseInt(parseInt(l)+parseInt(1)));
 	}
 	labels[0] += " (Starter/Dealer)"
+	labels[numplayers - 1] += " (Garbage)"
 	var myChart = new Chart(ctx, {
 		type: 'bar',
 		data: {
