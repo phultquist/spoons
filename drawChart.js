@@ -6,6 +6,7 @@ function drawChart(winData) {
 	for (l = 0; l < numplayers; l++){
 		labels.push("Player "+parseInt(parseInt(l)+parseInt(1)));
 	}
+	labels[0] += " (Starter/Dealer)"
 	var myChart = new Chart(ctx, {
 		type: 'bar',
 		data: {
