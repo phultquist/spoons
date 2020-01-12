@@ -1,3 +1,5 @@
+var chart;
+
 function drawChart(winData) {
 	var ctx = document.getElementById('chart').getContext('2d');
 	var labels = [];
@@ -41,4 +43,6 @@ function drawChart(winData) {
 			}
 		}
 	});
+
+	chart = myChart;
 }

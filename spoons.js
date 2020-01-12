@@ -5,6 +5,7 @@ var cardsInPile;
 var cardsOnTable;
 var cardsInGarbage = [];
 var wins = new Array(numplayers).fill(0);
+var numDeadGames = 0;
 //cards are 1: ACE, 2: 2 ... 11: JACK, 12: QUEEN, 13: KING
 
 var winner = null;
@@ -15,6 +16,7 @@ function playGame(){
 	while (winner == null){
 		if (numRounds > 1000) {
 			console.log("Dead Game");
+			numDeadGames ++;
 			return;
 		}
 		numRounds ++
@@ -25,9 +27,21 @@ function playGame(){
 }
 
 function calcAverageRoundsPerGame(){
+	return calcTotalRounds()/roundsPerGame.length;
+}
+
+function calcSmallestNumRounds(){
+	return Math.min.apply(Math, roundsPerGame)
+}
+
+function calcGreatestNumRounds(){
+	return Math.max.apply(Math, roundsPerGame)
+}
+
+function calcTotalRounds(){
 	var sum = 0;
 	for (r in roundsPerGame) sum += roundsPerGame[r];
-	return sum/roundsPerGame.length;
+	return sum;
 }
 
 function simulate(n){
@@ -61,8 +75,6 @@ function newGame(){
 			cards.push(new Card(i));
 		}
 	}
-
-	// console.log(cards);
 
 	var tempcards = shuffle(cards);
 
