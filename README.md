@@ -1,4 +1,4 @@
-# spoons
+# Spoons Simulation
 Simulation of the Spoons Card Game to Find the Best Position
 
 ## What is it
