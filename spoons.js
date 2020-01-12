@@ -82,7 +82,8 @@ function newGame(){
 	for (p = 0; p < numplayers; p++){
 		hand = [];
 		for (k = 0; k < 4; k++){
-			hand.push(tempcards.splice(p*4 + k, 1)[0]);
+			// hand.push(tempcards.splice(p*4 + k, 1)[0]);
+			hand.push(tempcards.pop());
 		}
 		players.push(new Player(p, hand));
 	}
