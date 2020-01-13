@@ -25,7 +25,7 @@ function drawChart(winData) {
 					'rgba(255, 150, 150, 0.2)',
 					'rgba(255, 159, 64, 0.2)',
 					'rgba(255, 255, 255, 0.2)',
-
+					'rgba(50, 100, 150, 0.2)',
 				],
 				borderColor: [
 					'rgba(255, 99, 132, 1)',
@@ -37,7 +37,7 @@ function drawChart(winData) {
 					'rgba(255, 150, 150, 1)',
 					'rgba(255, 159, 64, 1)',
 					'rgba(255, 255, 255, 1)',
-
+					'rgba(50, 100, 150, 1)',
 				],
 				borderWidth: 1
 			}]
