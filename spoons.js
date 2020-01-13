@@ -1,4 +1,4 @@
-var numplayers = 4;
+var numplayers = 10;
 var cards = [];
 var players = [];
 var cardsInPile;
